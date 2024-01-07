@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="flex ">
+    <div className="flex w-full h-full">
       <BrowserRouter>
         <Saidbar>
           <Routes>

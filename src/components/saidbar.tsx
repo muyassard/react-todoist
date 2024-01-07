@@ -35,10 +35,10 @@ const Saidbar = ({ children }: any) => {
     }
   ];
   return (
-    <>
+    <div className="flex w-full ">
       <div
         style={{ right: isOpen ? "220px" : "0px", background: isOpen ? "#fff" : "#fcfaf8", width: isOpen ? "80px" : "300px" }}
-        className="transition-all ease-in-out relative  p-4 flex flex-col gap-2"
+        className=" transition-all ease-in-out relative  p-4 flex flex-col gap-2"
       >
         <Profile
           elem={
@@ -60,8 +60,8 @@ const Saidbar = ({ children }: any) => {
           </NavLink>
         ))}
       </div>
-      <main>{children}</main>
-    </>
+      <main className="w-full" >{children}</main>
+    </div>
   );
 };
 
