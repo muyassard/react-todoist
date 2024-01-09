@@ -1,10 +1,10 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaCalendarAlt, FaInbox, FaSearch, FaThLarge } from "react-icons/fa";
+import { FaCalendarAlt, FaInbox, FaRegCalendarCheck, FaSearch, FaThLarge } from "react-icons/fa";
 import Profile from "./profile";
 import AddTask from "./addtask";
-import { useState } from "react";
 
-const Saidbar = ({ children }: any) => {
+function Saidbar({ children }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
@@ -15,13 +15,13 @@ const Saidbar = ({ children }: any) => {
     },
     {
       path: "/project",
-      name: "project",
+      name: "InBox",
       icon: <FaInbox />
     },
     {
       path: "/today",
       name: "today",
-      icon: <FaCalendarAlt />
+      icon: <FaRegCalendarCheck />
     },
     {
       path: "/upcoming",
@@ -52,7 +52,7 @@ const Saidbar = ({ children }: any) => {
             </svg>
           }
         />
-        <AddTask />
+        <AddTask   />
         {menuItem.map((item, idx) => (
           <NavLink to={item.path} key={idx} className="text-[#666] flex item-center gap-5 p-1 pl-3 hover:bg-[#fee6e3] rounded-lg">
             <div className="icon relative top-1">{item.icon}</div>
@@ -60,9 +60,9 @@ const Saidbar = ({ children }: any) => {
           </NavLink>
         ))}
       </div>
-      <main className="w-full" >{children}</main>
+      <main className="w-full">{children}</main>
     </div>
   );
-};
+}
 
 export default Saidbar;
