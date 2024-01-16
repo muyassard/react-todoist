@@ -4,6 +4,9 @@ import { FaCalendarAlt, FaInbox, FaRegCalendarCheck, FaSearch, FaThLarge } from 
 import Profile from "./profile";
 import AddTask from "./addtask";
 
+
+
+
 function Saidbar({ children }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -36,6 +39,7 @@ function Saidbar({ children }: any) {
   ];
   return (
     <div className="flex w-full ">
+
       <div
         style={{ right: isOpen ? "220px" : "0px", background: isOpen ? "#fff" : "#fcfaf8", width: isOpen ? "80px" : "300px" }}
         className=" transition-all ease-in-out relative  p-4 flex flex-col gap-2"
